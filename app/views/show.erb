@@ -1,0 +1,17 @@
+<h1> Article Viewer </h1>
+
+<a href="/articles">
+  Back to all Articles
+</a>
+
+<h2><%=@article.title %> </h2>
+
+<p><%=@article.content %></p>
+
+<a href="/articles/<%=@article.id%>/edit">
+  Edit Article
+</a>
+<form method="post" action="/articles/<%=@article.id%>">
+<input type="submit" value="Delete Article">
+<input id="hidden" type="hidden" name="_method" value="DELETE">
+</form>
