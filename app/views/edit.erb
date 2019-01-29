@@ -1,0 +1,40 @@
+
+<h1>Edit <% @articles.title %></h1>
+
+<a href="/articles">Go back</a>
+
+<form action="/articles/<%= @articles.id %>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+  <div>
+    <label
+      for="title"
+    >
+      Title:
+    </label>
+    <input
+      id="title"
+      type="text"
+      name="article[title]"
+      value=<%=@articles.title %>
+    />
+  </div>
+  <div>
+    <label
+      for="content"
+    >
+    Content:
+    </label>
+    <input
+      id="content"
+      type="number"
+      name="article[content]"
+      value=<%=@articles.content %>
+    />
+  </div>
+  <input type="submit" value="Edit <%= @articles.title %>" />
+</form>
+
+<form action="/articles/<%= @articles.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input id="mysubmit" type="mysubmit" value="Delete Article" />
+</form>

@@ -92,7 +92,7 @@ describe "Magazine App" do
       fill_in :title, :with => "Second Article!!"
       fill_in :content, :with => "this is the best article ever written"
 
-      page.find(:css, "[type=submit]").click
+      # page.find(:css, "[type=submit]").click
       expect(Article.all.count).to eq(2)
       expect(Article.last.title).to eq("Second Article!!")
     end
@@ -101,7 +101,7 @@ describe "Magazine App" do
       visit "/articles/#{@article2.id}/edit"
       fill_in :content, :with => "this is even better than the last"
 
-      page.find(:css, "[type=submit]").click
+      # page.find(:css, "[type=submit]").click
       expect(page.current_path).to eq("/articles/#{@article2.id}")
       expect(page.body).to include("this is even better than the last")
     end

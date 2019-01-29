@@ -1,0 +1,16 @@
+
+  <h1> Articles</h1>
+
+<p>
+  <%= @articles.title %>
+  <br>
+  <%= @articles.content%>
+</p>
+
+<button>
+  <a href="/articles/<%= @articles.id %>/edit"> Edit me </a>
+</button>
+
+<br>
+
+<a href="/articles"> Go back to see all the Articles </a>

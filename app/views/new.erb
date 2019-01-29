@@ -1,0 +1,15 @@
+<h1>Create new Article</h1>
+
+<a href="/articles">Go back</a>
+
+<form action="/articles" method="post">
+  <div>
+    <label for="title">Title:</label>
+    <input id="title" type="text" name="article[title]" />
+  </div>
+  <div>
+    <label for="content">Content:</label>
+    <input id="content" type="number" name="article[content]" />
+  </div>
+  <input type="submit" value="Create new article" />
+</form>
